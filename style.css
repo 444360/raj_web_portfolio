@@ -117,14 +117,14 @@ section {
 
 .navbar a {
     font-size: 1.7rem;
-    color: rgb(28, 28, 28); /* Explicit white color */
+    color: rgb(92, 92, 92); /* Explicit white color */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 /* Active state - white with underline */
 .navbar a.active {
-    color: rgb(28, 28, 28) !important;
+    color: rgb(92, 92, 92) !important;
     position: relative;
 }
 
