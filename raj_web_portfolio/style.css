@@ -111,14 +111,14 @@ section {
 
 .navbar a {
     font-size: 1.7rem;
-    color: white; /* Explicit white color */
+    color: rgb(135, 135, 135); /* Explicit white color */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 /* Active state - white with underline */
 .navbar a.active {
-    color: white !important;
+    color: rgb(135, 135, 135) !important;
     position: relative;
 }
 
@@ -234,18 +234,18 @@ section {
     width: 25vw;
     border-radius: 50%; 
     box-shadow: 
-        0 0 20px var(--main-color),
-        0 0 40px var(--main-color),
-        0 0 80px var(--main-color);
+        0 0 25px var(--main-color),
+        0 0 50px var(--main-color),
+        0 0 90px var(--main-color);
     transition: all 0.4s ease-in-out;
     object-position: center;
 }
 
 .home-img img:hover {
     box-shadow: 
-        0 0 25px var(--main-color),
         0 0 50px var(--main-color),
-        0 0 100px var(--main-color);
+        0 0 75px var(--main-color),
+        0 0 140px var(--main-colour);
     transform: scale(1.02);
 }
 
@@ -286,17 +286,17 @@ section {
     width: 25vw;
     border-radius: 50%;
     box-shadow: 
-        0 0 20px var(--main-color),
-        0 0 40px var(--main-color),
-        0 0 80px var(--main-color);
+        0 0 25px var(--main-color),
+        0 0 50px var(--main-color),
+        0 0 90px var(--main-color);
     transition: all 0.4s ease-in-out;
 }
 
 .about-img img:hover {
     box-shadow: 
-        0 0 25px var(--main-color),
         0 0 50px var(--main-color),
-        0 0 100px var(--main-color);
+        0 0 75px var(--main-color),
+        0 0 140px var(--main-colour);
         transform: scale(1.02)
 }
 
