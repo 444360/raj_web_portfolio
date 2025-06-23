@@ -833,44 +833,47 @@ section {
 
 
 @media (max-width: 768px) {
-
     .about {
-        min-height: auto;
-        padding-bottom: 5rem;
+        overflow: hidden;
+        padding: 8rem 5% 4rem;
     }
     .about-content {
         width: 100%;
+        box-sizing: border-box;
+        padding: 0 1rem;
     }
-    .about-content p {
-        font-size: 1.7rem;
-        line-height: 1.7;
+    .skills-badges {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
-
+    .skill-badge {
+        min-width: 0;
+        padding: 1.2rem 0.8rem;
+        font-size: 1.2rem;
+        white-space: normal;
+    }
     .navbar {
         flex-direction: column;
-        padding: 2rem 0;
+        align-items: center;
+        padding: 2rem 1rem;
     }
     .navbar a {
-        margin: 1rem 0;
-        width: 80%;
+        width: 94%;
         text-align: center;
-    }
-
-    /* 3. Prevent skills overlap */
-    .skills-container {
-        flex-direction: column;
-    }
-    .skill {
-        grid-template-columns: 120px 1fr;
+        margin: 0.8rem 0;
+        padding: 0.8rem;
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 480px) {
-    /* Extra small screens */
+    .skills-badges {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
     .about-content p {
         font-size: 1.6rem;
-    }
-    .skills-badges {
-        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
