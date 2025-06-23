@@ -744,19 +744,19 @@ section {
     }
     
     .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        top: 8rem;
+        left: -100%;
         width: 100%;
-        padding: 1rem 3%;
+        height: calc(100dvh - 8rem); 
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        display: none;
+        flex-direction: column;
+        transition: 0.3s ease;
+        padding: 2rem 0;
     }
     
     .navbar.active {
-        display: block;
+        left: 0;
     }
     
     .navbar a {
@@ -766,7 +766,9 @@ section {
     }
     
     .home {
-        flex-direction: column;
+        flex-direction: column-reverse; /* Image on top */
+        gap: 3rem;
+        padding-top: 8rem;
     }
     
     .home-content h3 {
@@ -778,10 +780,11 @@ section {
     }
     
     .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
+        width: 65vw;
+        margin: 0 auto 3rem;
     }
-    
+
+
     .about {
         flex-direction: column;
         gap: 3rem;
