@@ -70,12 +70,11 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-BANANA FISH
-
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
+
 
 
 /*START OF HEADER*/
@@ -692,7 +691,7 @@ section {
 
 
 
-/* BREAKPOINTS / MEDIA QUERIES */
+/* BREAKPOINTS / MEDIA QUERIES (mobile) */
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -736,16 +735,17 @@ section {
 }
 
 @media (max-width: 768px) {
+
+    section {
+        min-height: auto;
+        padding: 8rem 5% 4rem;
+        height: auto !important;
+    }
+
     #menu-icon {
         display: block;
     }
     
-    section {
-        min-height: 100dvh;
-        height: auto;
-    } 
-
-
     .navbar {
         position: absolute;
         top: 100%;
@@ -769,9 +769,7 @@ section {
     }
     
     .home {
-        flex-direction: column-reverse;
-        min-height: calc(100dvh - 8rem);
-        gap: 3rem; 
+        flex-direction: column;
     }
     
     .home-content h3 {
@@ -783,60 +781,68 @@ section {
     }
     
     .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
+        width: 60vw;
+        max-width: 300px;
+        margin: 2rem auto;
     }
     
     .about {
-        flex-direction: column;
-        gap: 3rem;
-        padding-top: 5rem;
+        flex-direction: column-reverse;
     }
     
     .about-img img {
-        width: 65vw;
-        margin: 0 auto 3rem; 
+        width: 60vw;
+        max-width: 300px;
+        margin: 2rem auto;
     }
-
     
     .project h2 {
         margin-bottom: 3rem;
     }
     
     .project-container {
-        grid-template-columns: 1fr; 
-        gap: 3rem;
+        grid-template-columns: 1fr;
         padding: 0 1rem;
-    }
-
-
-    .skills-grid {
-        flex-direction: column; 
-        gap: 2rem;
     }
 
     .skills-container {
         flex-direction: column;
+        gap: 3rem;
     }
-    
+
     .skills-badges {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
         width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 0 1rem;
     }
-    
-    .skill-badge {
-        padding: 1.5rem 1rem;
-    }
-    
+
     .skills-section {
         width: 100%;
-        margin-top: 3rem;
+        margin: 3rem auto 0;
+        padding: 0 2rem;
+    }
+
+    .skill {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .skill-name {
+        text-align: left;
+        margin-bottom: 0;
+        min-width: 120px;
     }
 
 
 }
 
+@media (max-width: 617px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 450px) {
     html {
