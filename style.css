@@ -693,18 +693,9 @@ section {
 
 /* BREAKPOINTS / MEDIA QUERIES (mobile) */
 
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
-}
-
-::-webkit-scrollbar-track{
-    background-color: var(--bg-color);
-}
-
+/* ====================== */
+/* RESPONSIVE MEDIA QUERIES */
+/* ====================== */
 
 @media (max-width: 1200px) {
     html {
@@ -735,45 +726,44 @@ section {
 }
 
 @media (max-width: 768px) {
-
-    section {
-        min-height: auto;
-        padding: 8rem 5% 4rem;
-        height: auto !important;
-    }
-
+    /* Fixed Mobile Menu - Now Vertical */
     #menu-icon {
         display: block;
     }
     
     .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        top: 8rem;
+        left: -100%;
         width: 100%;
-        padding: 1rem 3%;
+        height: calc(100dvh - 8rem);
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+        transition: 0.3s ease;
+        z-index: 999;
     }
     
     .navbar.active {
-        display: block;
+        left: 0;
     }
     
     .navbar a {
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        font-size: 2.2rem;
+        margin: 1.5rem 0;
+        width: 80%;
+        text-align: center;
+        padding: 1rem;
     }
-    
+
+    /* Home Section */
     .home {
-        flex-direction: column;
-    }
-    
-    .home-content h3 {
-        font-size: 2.6rem;
+        flex-direction: column-reverse;
+        padding-top: 8rem;
+        gap: 4rem;
     }
     
     .home-content h1 {
@@ -781,94 +771,103 @@ section {
     }
     
     .home-img img {
-        width: 60vw;
-        max-width: 300px;
-        margin: 2rem auto;
-    }
-    
-    .about {
-        flex-direction: column-reverse;
-    }
-    
-    .about-img img {
-        width: 60vw;
-        max-width: 300px;
-        margin: 2rem auto;
-    }
-    
-    .project h2 {
-        margin-bottom: 3rem;
-    }
-    
-    .project-container {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
+        width: 65vw;
+        margin: 0 auto;
     }
 
-    .skills-container {
+    /* About Section */
+    .about {
         flex-direction: column;
         gap: 3rem;
     }
+    
+    .about-img img {
+        width: 65vw;
+        margin: 0 auto;
+    }
 
+    /* Skills Section Fix */
+    .skills-container {
+        flex-direction: column;
+    }
+    
     .skills-badges {
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         padding: 0 1rem;
     }
-
+    
     .skills-section {
         width: 100%;
         margin: 3rem auto 0;
         padding: 0 2rem;
     }
-
+    
     .skill {
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 140px 1fr;
         align-items: center;
     }
-
+    
     .skill-name {
         text-align: left;
-        margin-bottom: 0;
-        min-width: 120px;
+    }
+    
+    .star-rating {
+        justify-content: flex-start;
     }
 
-
-}
-
-@media (max-width: 617px) {
+    /* Projects */
     .project-container {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 450px) {
-    html {
-        font-size: 50%;
+@media (max-width: 480px) {
+    .skills-badges {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
     
-    .contact form .input-box input {
-        width: 100%;
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    
+    .heading {
+        font-size: 3.8rem;
+    }
+
+    .navbar a {
+        font-size: 2rem;
+        margin: 1.2rem 0;
     }
 }
 
 @media (max-width: 365px) {
-    .home-img img {
-        width: 90vw;
-    }
-    
+    .home-img img,
     .about-img img {
-        width: 90vw;
+        width: 80vw;
     }
     
     .footer {
         flex-direction: column-reverse;
+        gap: 1.5rem;
     }
-    
-    .footer p {
-        text-align: center;
-        margin-top: 2rem;
+
+    .skills-badges {
+        grid-template-columns: 1fr !important;
     }
+}
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
 }
