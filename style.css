@@ -281,6 +281,10 @@ section {
     background: var(--second-bg-color);
 }
 
+.about-img, .about img {
+    display: none !important;
+}
+
 .about-content h2 span {
     background: var(--name-gradient);
     background-clip: text;
