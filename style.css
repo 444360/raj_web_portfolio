@@ -782,11 +782,11 @@ section {
         margin-top: 4rem;
     }
     
-    .about {
+  /*   .about {
         flex-direction: column-reverse;
     }
     
-  /*  .about img {
+   .about img {
         width: 70vw;
         margin-top: 4rem;
     }   */
@@ -895,6 +895,11 @@ section {
     .navbar.active {
         display: flex !important;
     }
+
+    .about-img, .about img {
+        display: none !important;
+    } 
+    
 }
 
 @media (max-width: 480px) {
@@ -905,4 +910,10 @@ section {
     .about-content p {
         font-size: 1.4rem !important;
     }
+
+    .about-img, .about img {
+        display: none !important;
+    }
+
+
 }
