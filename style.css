@@ -831,52 +831,74 @@ section {
     }
 }
 
-/* ===== MOBILE FIXES ONLY ===== */
+/* ===== FINAL MOBILE OPTIMIZATION ===== */
 @media (max-width: 768px) {
-    /* Fix navbar visibility */
-    .navbar.active {
-        display: flex !important;
-        flex-direction: column;
+    /* Base fixes to prevent overflow */
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
     }
-
-    /* Adjust skill boxes */
+    
+    /* Fix skill boxes */
     .skills-badges {
-        grid-template-columns: repeat(2, minmax(120px, 1fr)) !important;
-        gap: 12px !important;
+        grid-template-columns: repeat(2, minmax(110px, 1fr)) !important;
+        gap: 10px !important;
+        padding: 0 5px !important;
+        margin: 0 auto !important;
     }
     
     .skill-badge {
-        padding: 10px 5px !important;
-        font-size: 1.3rem !important;
-        min-height: 40px !important;
+        padding: 8px 4px !important;
+        font-size: 1.2rem !important;
+        min-height: 35px !important;
+        border-width: 1px !important;
     }
 
-    /* Fix text sizing */
+    /* About section adjustments */
+    .about {
+        background: var(--second-bg-color) !important;
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        padding: 8rem 5% !important;
+    }
+    
+    .about-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
     .about-content p {
         font-size: 1.5rem !important;
         line-height: 1.6 !important;
     }
     
-    .skills-column li {
-        font-size: 1.5rem !important;
-    }
-
-    /* Adjust heading sizes */
-    .home-content h1 {
-        font-size: 4.2rem !important;
+    /* Project section background fix */
+    .project {
+        background: var(--bg-color) !important;
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
     }
     
-    .heading {
-        font-size: 3.8rem !important;
+    /* Keep navbar visible */
+    .navbar.active {
+        display: flex !important;
     }
 }
 
 @media (max-width: 480px) {
     .skills-badges {
-        grid-template-columns: repeat(2, minmax(100px, 1fr)) !important;
+        grid-template-columns: 1fr !important;
     }
     
-    .skill-badge {
-        font-size: 1.2rem !important;
+    .about-content p {
+        font-size: 1.4rem !important;
     }
 }
