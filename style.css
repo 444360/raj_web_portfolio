@@ -696,7 +696,7 @@ section {
     }
     
     .navbar.active {
-        display: block;
+        display: flex;
     }
     
     .navbar a {
@@ -735,8 +735,16 @@ section {
         overflow-x: hidden !important;
     }
     
+    /* Updated Skills Section */
+    .skills-container {
+        flex-direction: column;
+        gap: 3rem !important;
+    }
+    
     .skills-badges {
         grid-template-columns: repeat(2, minmax(110px, 1fr)) !important;
+        width: 100% !important;
+        order: 1;
         gap: 10px !important;
         padding: 0 5px !important;
         margin: 0 auto !important;
@@ -747,6 +755,32 @@ section {
         font-size: 1.2rem !important;
         min-height: 35px !important;
         border-width: 1px !important;
+    }
+    
+    .skills-section {
+        width: 100% !important;
+        margin-top: 0 !important;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill {
+        align-items: center !important;
+        margin-bottom: 2rem;
+    }
+    
+    .skill-name {
+        text-align: center !important;
+        margin-bottom: 8px;
+        font-size: 1.6rem;
+    }
+    
+    .star-rating {
+        justify-content: center;
+        gap: 6px;
+        margin-top: 0.5rem;
     }
 
     .about {
@@ -779,15 +813,21 @@ section {
         margin-left: -50vw !important;
         margin-right: -50vw !important;
     }
-    
-    .navbar.active {
-        display: flex !important;
-    }
 }
 
 @media (max-width: 617px) {
     .project-container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-badges {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .about-content p {
+        font-size: 1.4rem !important;
     }
 }
 
@@ -813,16 +853,6 @@ section {
     .footer p {
         text-align: center;
         margin-top: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-badges {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .about-content p {
-        font-size: 1.4rem !important;
     }
 }
 
